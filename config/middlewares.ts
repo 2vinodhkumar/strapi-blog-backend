@@ -1,4 +1,11 @@
 export default [
+  'strapi::errors',
+  {
+    name: 'global::restrict-admin',
+    config: {
+      resolve: './middlewares/restrict-admin',
+    },
+  },
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
