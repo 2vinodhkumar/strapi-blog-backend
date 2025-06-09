@@ -13,7 +13,7 @@ console.log('Client IP:', clientIp);
 if (
   ctx.request.url.startsWith('/admin') &&
   process.env.NODE_ENV === 'production' &&
-  !allowedIps.includes(ip)
+  !allowedIps.includes(clientIp)
 ) {
   ctx.unauthorized('Admin access is disabled for your IP');
 }
